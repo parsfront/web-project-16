@@ -61,3 +61,32 @@ function autoSlide() {
 }
 
 let timer = setInterval(autoSlide, duration);
+
+progress();
+
+const searchForm = document.querySelector(".search-form");
+const search = document.querySelector(".search");
+
+searchForm.addEventListener("click", function () {
+    search.classList.toggle("show");
+});
+
+const dropdown = document.querySelector("#dropdown");
+const megaenu = document.querySelector(".mega-menu");
+const closeIcon = document.querySelector(".close-icon");
+const navbarList = document.querySelector("#navbar-list");
+const hamburger = document.querySelector(".hamburger");
+
+dropdown.addEventListener("click", function () {
+    megaenu.classList.toggle("fade");
+});
+
+closeIcon.addEventListener("click", function () {
+    navbarList.classList.add("hide-navbar");
+    navbarList.classList.remove("show-navbar");
+});
+
+hamburger.addEventListener("click", function () {
+    navbarList.classList.add("show-navbar");
+    navbarList.classList.remove("hide-navbar");
+});
